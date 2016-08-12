@@ -4,7 +4,7 @@ MAINTAINER Daniel Kim <daniel@inka.co.kr>
 # Install required utils
 RUN yum -y install unzip
 
-# *Create node app and packager directory
+# Create node app and packager directory
 
 # Download app source from pallycon server (will be added later)
 WORKDIR /usr/src
@@ -14,7 +14,7 @@ RUN wget "http://pallycon.com/pallycon-contents/qs_node_app.zip" && unzip qs_nod
 WORKDIR /usr/src/app
 RUN npm install
 
-# *Bundle app source and give scripts permission
+# Bundle app source and give scripts permission
 # COPY app/. /usr/src/app
 # RUN chmod 744 /usr/src/app/packager/*.sh
 
