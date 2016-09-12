@@ -1,1 +1,1 @@
-docker build -t danielinka/pallycon-quickstart-docker:0.1 . && docker images
+docker build -t danielinka/pallycon-quickstart-docker:0.2 . && docker images

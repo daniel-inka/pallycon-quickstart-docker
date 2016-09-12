@@ -1,13 +1,12 @@
 {
-  "name": "docker_web_app",
+  "name": "express-tutorial",
   "version": "1.0.0",
-  "description": "Node.js on Docker",
-  "author": "First Last <first.last@example.com>",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
   "dependencies": {
-    "express": "^4.13.3"
+    "body-parser": "~1.14.2",
+    "ejs": "~2.4.1",
+    "express": "~4.13.1",
+    "express-session": "~1.13.0",
+    "jsonfile": "^2.3.1",
+    "xml2js": "^0.4.17"
   }
 }
