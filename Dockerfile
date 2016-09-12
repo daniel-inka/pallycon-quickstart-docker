@@ -4,12 +4,14 @@ MAINTAINER Daniel Kim <daniel@inka.co.kr>
 # Install required utils
 RUN yum -y update
 RUN yum -y install unzip
+RUN yum -y install git
 
 # Create node app and packager directory
 
-# Download app source from pallycon server (will be added later)
+# Download app source from github repository
 WORKDIR /usr/src
-RUN wget "http://sample.pallycon.com/quickstart/qs_node_app.zip" && unzip qs_node_app.zip
+RUN git clone https://github.com/inka-pallycon/pallycon-quickstart-node.git app
+# RUN wget "http://sample.pallycon.com/quickstart/qs_node_app.zip" && unzip qs_node_app.zip
 
 # Install app dependencies
 WORKDIR /usr/src/app
@@ -41,6 +43,6 @@ VOLUME ["/usr/src/app/data"]
 # RUN mkdir -p /usr/src/app/website/gateway
 # VOLUME ["/usr/local/work", "/usr/src/app/website/gateway"]
 
-EXPOSE 8120
+EXPOSE 8080
 WORKDIR /usr/src/app
 CMD ["node", "server.js"]
